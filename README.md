@@ -10,6 +10,8 @@ This repository contains code, data, analysis scripts and results for my MSc the
 ├── MusicTransformer-Pytorch-private
 │    ├── probe_prediction_scripts/                                                           # Scripts for running the whole pipeline from initial IDyOM and Transformer predictions to forming the table used in statistical analysis
 │    │    ├── extract_relevant_probs_from_schell_cpitch_idyom_output.py                       # Get the required diatonic pitches for modelling the Schellenberg experiment from IDyOM output (cpitch viewpoint)
+│    │    ├── rpr_ftuned_schell_add_relevant_transformer_probs_to_idyom_table.py               # Add the Transformer Schellenberg probability predictions to the already existing table containing the IDyOM probbilities and IC values.
+│    │    ├── rpr_ftuned_schell_add_transformer_ic_to_merged_table.py                         # Add the Transformer Schellenberg ic predictions to the already existing table containing IDyOM probbilities & ICs and Transformer probabilities
 │    │    ├── rpr_ftuned_schell_get_transformer_midi_47_to_84_and_normalise.py                # Take transformer probe probabilities for midi 0-127, keep 47-84 and normalise (this step is done primarily for easy inspection of the probabilities; normalisation isn't necessary)
 │    │    └── schell_cpitch_add_idyom_ic.py                                                   # Add Information Content (IC) to the table containing IDyOM probabilities for Schellenberg (cpitch viewpoint)
 │    ├── probe_prediction-results/                                                           # Contains outputs of the scripts in probe_prediction_scripts
@@ -18,7 +20,5 @@ This repository contains code, data, analysis scripts and results for my MSc the
 └── TrainedModels/
      ├── MTMaestro_with_RPR/                                                                # Output of training the Music Transformer on Maestro with rpr=True (contains results, weights, params, etc.)
      └── MTMaestroRPR_finetuned_on_MCCC/                                                    # Output of fine-tuning the Music Transformer on MCCC with rpr=True (contains results, weights, params, etc.)
-     
-
 
 ```
