@@ -10,8 +10,9 @@ This repository contains code, data, analysis scripts and results for my MSc the
 ├── MusicTransformer-Pytorch-private
 │    ├── probe_prediction_scripts/                                                           # Scripts for running the whole pipeline from initial IDyOM and Transformer predictions to forming the table used in statistical analysis
 │    │    ├── extract_relevant_probs_from_schell_cpitch_idyom_output.py                       # Get the required diatonic pitches for modelling the Schellenberg experiment from IDyOM output (cpitch viewpoint)
-│    │    ├── rpr_ftuned_schell_add_relevant_transformer_probs_to_idyom_table.py               # Add the Transformer Schellenberg probability predictions to the already existing table containing the IDyOM probbilities and IC values.
-│    │    ├── rpr_ftuned_schell_add_transformer_ic_to_merged_table.py                         # Add the Transformer Schellenberg ic predictions to the already existing table containing IDyOM probbilities & ICs and Transformer probabilities
+│    │    ├── rpr_ftuned_schell_cpitch_add_human_data.py                                             # Add the human ratings to the merged cpitch IDyOM & Transformer probabilities and IC table
+│    │    ├── rpr_ftuned_schell_add_relevant_transformer_probs_to_cpitch_idyom_table.py       # Add the Transformer Schellenberg probability predictions to the already existing table containing the cpitch IDyOM probabilities and IC values.
+│    │    ├── rpr_ftuned_schell_add_transformer_ic_to_merged_cpitch_table.py                         # Add the Transformer Schellenberg ic predictions to the already existing table containing IDyOM probbilities & ICs and Transformer probabilities
 │    │    ├── rpr_ftuned_schell_get_transformer_midi_47_to_84_and_normalise.py                # Take transformer probe probabilities for midi 0-127, keep 47-84 and normalise (this step is done primarily for easy inspection of the probabilities; normalisation isn't necessary)
 │    │    └── schell_cpitch_add_idyom_ic.py                                                   # Add Information Content (IC) to the table containing IDyOM probabilities for Schellenberg (cpitch viewpoint)
 │    ├── probe_prediction-results/                                                           # Contains outputs of the scripts in probe_prediction_scripts
