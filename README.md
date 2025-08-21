@@ -30,7 +30,9 @@ predictions more interpretable.
 
 ## Instructions for running code
 
-```
-
-
-```
+- Train the Music Transformer on MAESTRO using train.py
+- Pre-process the MCCC corpus to tokenise it using preprocess_midi_MCCC.py
+- Train on MAESTRO (inluded in repo) using train.py (training parameters detailed in paper)
+- Likewise, fine-tune on MCCC using train.py
+- Preprocess stimuli to get from kern to midi format using kern_to_midi_convert.py (or simply access converted files from cudlun_midi_stimuli_with_probe and schellenberg_midi_stimuli_with_probe folders)
+- 
