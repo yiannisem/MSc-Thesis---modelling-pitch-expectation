@@ -1,4 +1,4 @@
-# MSc Thesis - Modelling Pitch Expectation
+# MSc Thesis - Modelling Pitch Expectation in Melody: A Comparison of Variable-Order Markov and Transformer-Based Approaches
 
 This repository contains the research paper and code for my MSc thesis, which compares the performance of the IDyOM variable-order Markov model and the Music Transformer in modelling melodic pitch expectation. It is an adaptations of the work of Kern et al. (2022) - repository available through https://data.ru.nl/collections/di/dccn/DSC_3018045.02_116.
 
