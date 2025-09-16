@@ -1,0 +1,4 @@
+Data/
+Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestro
+Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestro_with_RPR
+Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestroRPR_finetuned_on_MCCC

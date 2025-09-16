@@ -1,0 +1,55 @@
+=== Raw-scale regression ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Human Rating   R-squared:                       0.714
+Model:                            OLS   Adj. R-squared:                  0.709
+Method:                 Least Squares   F-statistic:                     146.3
+Date:                Sun, 17 Aug 2025   Prob (F-statistic):           1.46e-32
+Time:                        19:04:56   Log-Likelihood:                -133.27
+No. Observations:                 120   AIC:                             272.5
+Df Residuals:                     117   BIC:                             280.9
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const              6.3404      0.167     37.942      0.000       6.009       6.671
+IDyOM IC          -0.1354      0.030     -4.526      0.000      -0.195      -0.076
+Transformer IC    -0.2277      0.028     -8.108      0.000      -0.283      -0.172
+==============================================================================
+Omnibus:                        0.546   Durbin-Watson:                   1.056
+Prob(Omnibus):                  0.761   Jarque-Bera (JB):                0.683
+Skew:                           0.075   Prob(JB):                        0.711
+Kurtosis:                       2.662   Cond. No.                         27.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== Standardized (beta) regression ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Human Rating   R-squared:                       0.714
+Model:                            OLS   Adj. R-squared:                  0.709
+Method:                 Least Squares   F-statistic:                     146.3
+Date:                Sun, 17 Aug 2025   Prob (F-statistic):           1.46e-32
+Time:                        19:04:56   Log-Likelihood:                -95.089
+No. Observations:                 120   AIC:                             196.2
+Df Residuals:                     117   BIC:                             204.5
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const          -3.296e-17      0.049  -6.67e-16      1.000      -0.098       0.098
+IDyOM IC          -0.3241      0.072     -4.526      0.000      -0.466      -0.182
+Transformer IC    -0.5806      0.072     -8.108      0.000      -0.722      -0.439
+==============================================================================
+Omnibus:                        0.546   Durbin-Watson:                   1.056
+Prob(Omnibus):                  0.761   Jarque-Bera (JB):                0.683
+Skew:                           0.075   Prob(JB):                        0.711
+Kurtosis:                       2.662   Cond. No.                         2.50
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

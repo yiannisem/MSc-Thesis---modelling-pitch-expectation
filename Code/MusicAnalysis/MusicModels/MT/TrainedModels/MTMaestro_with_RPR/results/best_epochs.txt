@@ -1,0 +1,4 @@
+Best eval acc epoch: 139
+Best eval acc: 0.4247997473464923
+Best eval loss epoch: 144
+Best eval loss: 1.9525574793976344

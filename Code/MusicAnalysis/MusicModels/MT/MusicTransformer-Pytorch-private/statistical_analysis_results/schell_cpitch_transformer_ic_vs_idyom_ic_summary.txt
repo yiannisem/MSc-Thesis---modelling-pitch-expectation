@@ -1,0 +1,26 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               IDyOM IC   R-squared:                       0.516
+Model:                            OLS   Adj. R-squared:                  0.512
+Method:                 Least Squares   F-statistic:                     125.9
+Date:                Wed, 20 Aug 2025   Prob (F-statistic):           2.49e-20
+Time:                        19:15:49   Log-Likelihood:                -274.67
+No. Observations:                 120   AIC:                             553.3
+Df Residuals:                     118   BIC:                             558.9
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const              1.8987      0.499      3.804      0.000       0.910       2.887
+Transformer IC     0.7036      0.063     11.222      0.000       0.579       0.828
+==============================================================================
+Omnibus:                       20.371   Durbin-Watson:                   1.052
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               27.484
+Skew:                           0.890   Prob(JB):                     1.08e-06
+Kurtosis:                       4.527   Cond. No.                         18.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Pearson r = 0.7185, p = 2.49e-20
