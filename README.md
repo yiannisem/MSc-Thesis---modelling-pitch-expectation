@@ -13,7 +13,8 @@ findings suggest that while the Music Transformer offers an advantage when highe
 
 ### Training and fine-tuning the Music Transformer
 
-- Pre-process the MAESTRO dataset (included in repo) using preprocess_midi.py. Includes tokenisation and splitting into training, validation and test sets.
+- The MAESTRO and MCCC datasets need to be downloaded to facilitate training and fine-tuning. The MAESTRO dataset is available here: https://magenta.withgoogle.com/datasets/maestro (use MAESTRO v2.0.0). The MCCC is available here: https://osf.io/dg7ms/. Direct the scripts in the following steps to the appropriate paths for these two corpuses.
+- Pre-process the MAESTRO dataset using preprocess_midi.py. Includes tokenisation and splitting into training, validation and test sets.
 - Train the Music Transformer on MAESTRO using train.py (training parameters detailed in paper)
 - Pre-process the MCCC corpus using preprocess_midi_MCCC.py
 - Likewise, fine-tune on MCCC using train.py
