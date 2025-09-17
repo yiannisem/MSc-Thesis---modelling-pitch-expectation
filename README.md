@@ -7,8 +7,6 @@ findings suggest that while the Music Transformer offers an advantage when highe
 
 ## Instructions for running
 
-Divided into the following subsections:
-
 ### Obtaining IDyOM predictions
 
 - Obtain .dat file with IDyOM results for the desired stimulus using the wanted IDyOM configurations and viewpoints. Guidance on this can be found at https://github.com/mtpearce/idyom/wiki, which provides relevant documentation and a tutorial.
@@ -34,12 +32,12 @@ Note: the scripts mentioned in this section are located in the probe_prediction_
 
 Depending on if the choice of stimuli dataset, use 1 or 2
 
-1 (Schellenberg): 
+1 - Schellenberg: 
 - Use rpr_ftuned_schell_get_transformer_midi_47_to_84_and_normalise.py on the Transformer prediction output for the probe tones, and the output of this is inputted into rpr_ftuned_schell_add_relevant_transformer_probs_to_cpitch_idyom_table.py to merge with the aforementioned IDyOM table with the wanted probabilities.
 - Use rpr_ftuned_schell_add_transformer_ic_to_merged_table.py to add the IC values to the output table of the previous step.
 - Use rpr_ftuned_schell_cpitch_add_human_data.py to add the human ratings to the output table from the previous step.
 
-2 (Cuddy and Lunney):
+2 - Cuddy and Lunney:
 - Use rpr_ftuned_cudlun_add_relevant_transformer_probs_to_idyom_table.py to add the required probabilities from the Transformer's prediction output to the IDyOM table with the wanted probabilities.
 - Use rpr_ftuned_cudlun_add_transformer_ic_to_merged_cpitch_table.py to add the IC values to the output table of the previous step.
 - Use rpr_ftuned_cudlun_add_human_data.py to add the human ratings to the output table from the previous step.
