@@ -5,6 +5,10 @@ neural models such as the Music Transformer have demonstrated success in symboli
 derived viewpoint configurations, while Transformer probabilities were obtained from a model trained on MAESTRO and finetuned on the Monophonic Corpus of Complete Compositions. Regression analyses showed that the Transformer significantly outperformed IDyOM for short two-note contexts, whereas both models performed comparably for longer melodic contexts. These
 findings suggest that while the Music Transformer offers an advantage when higher-level structural information is absent, IDyOM remains a competitive model for longer melodic sequences, and their comparison helps render the Transformer’s predictions more interpretable.
 
+## Paper and Poster
+
+This repository contains the paper with the full details of the research, as well as a poster which I presented at DMRN +20 in London in December, 2025, for a more brief synopsis of my work.
+
 ## Video Presentation
 
 A video presentation summarising my research paper can be found here: https://youtu.be/ii7TDOAyz4M.
