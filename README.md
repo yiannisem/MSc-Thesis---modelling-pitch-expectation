@@ -7,7 +7,7 @@ findings suggest that while the Music Transformer offers an advantage when highe
 
 ## Paper and Poster
 
-This repository contains the paper with the full details of the research, as well as a poster which I presented at DMRN +20 in London in December, 2025, for a more brief synopsis of my work.
+This repository contains the paper with the full details of the research, as well as a poster which I presented at DMRN+20 in London in December, 2025, for a more brief synopsis of my work.
 
 ## Video Presentation
 
