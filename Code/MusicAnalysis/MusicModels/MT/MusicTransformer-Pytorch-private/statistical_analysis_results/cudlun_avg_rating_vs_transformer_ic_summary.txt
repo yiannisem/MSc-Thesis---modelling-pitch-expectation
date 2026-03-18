@@ -3,8 +3,8 @@
 Dep. Variable:         Average Rating   R-squared:                       0.559
 Model:                            OLS   Adj. R-squared:                  0.557
 Method:                 Least Squares   F-statistic:                     250.7
-Date:                Sat, 16 Aug 2025   Prob (F-statistic):           5.02e-37
-Time:                        18:38:10   Log-Likelihood:                -217.07
+Date:                Sun, 07 Dec 2025   Prob (F-statistic):           5.02e-37
+Time:                        20:30:28   Log-Likelihood:                -217.07
 No. Observations:                 200   AIC:                             438.1
 Df Residuals:                     198   BIC:                             444.7
 Df Model:                           1                                         

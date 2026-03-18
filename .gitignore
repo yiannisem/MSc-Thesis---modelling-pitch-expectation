@@ -1,4 +1,16 @@
+# Original Repo ignores:
 Data/
 Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestro
 Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestro_with_RPR
 Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestroRPR_finetuned_on_MCCC
+
+# Python / Jupyter caches (Added by us to hide those 4,000+ files!):
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# OS generated files:
+desktop.ini
+.DS_Store
+
+

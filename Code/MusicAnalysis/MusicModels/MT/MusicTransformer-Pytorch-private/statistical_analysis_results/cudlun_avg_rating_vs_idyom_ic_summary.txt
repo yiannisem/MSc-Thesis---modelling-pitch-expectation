@@ -1,26 +1,26 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:         Average Rating   R-squared:                       0.367
-Model:                            OLS   Adj. R-squared:                  0.363
-Method:                 Least Squares   F-statistic:                     114.6
-Date:                Sat, 16 Aug 2025   Prob (F-statistic):           2.14e-21
-Time:                        18:38:10   Log-Likelihood:                -253.22
-No. Observations:                 200   AIC:                             510.4
-Df Residuals:                     198   BIC:                             517.0
+Dep. Variable:         Average Rating   R-squared:                       0.687
+Model:                            OLS   Adj. R-squared:                  0.685
+Method:                 Least Squares   F-statistic:                     433.8
+Date:                Sun, 07 Dec 2025   Prob (F-statistic):           8.80e-52
+Time:                        20:30:28   Log-Likelihood:                -182.85
+No. Observations:                 200   AIC:                             369.7
+Df Residuals:                     198   BIC:                             376.3
 Df Model:                           1                                         
 Covariance Type:            nonrobust                                         
 =============================================================================================
                                 coef    std err          t      P>|t|      [0.025      0.975]
 ---------------------------------------------------------------------------------------------
-const                         5.7677      0.161     35.820      0.000       5.450       6.085
-IDyOM Information Content    -0.2242      0.021    -10.706      0.000      -0.265      -0.183
+const                         6.1709      0.105     58.709      0.000       5.964       6.378
+IDyOM Information Content    -0.2748      0.013    -20.828      0.000      -0.301      -0.249
 ==============================================================================
-Omnibus:                        4.067   Durbin-Watson:                   2.343
-Prob(Omnibus):                  0.131   Jarque-Bera (JB):                2.560
-Skew:                          -0.025   Prob(JB):                        0.278
-Kurtosis:                       2.448   Cond. No.                         20.6
+Omnibus:                        7.347   Durbin-Watson:                   1.832
+Prob(Omnibus):                  0.025   Jarque-Bera (JB):                7.582
+Skew:                           0.475   Prob(JB):                       0.0226
+Kurtosis:                       2.915   Cond. No.                         19.8
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-Pearson r = -0.6055, p = 2.14e-21
+Pearson r = -0.8286, p = 8.8e-52

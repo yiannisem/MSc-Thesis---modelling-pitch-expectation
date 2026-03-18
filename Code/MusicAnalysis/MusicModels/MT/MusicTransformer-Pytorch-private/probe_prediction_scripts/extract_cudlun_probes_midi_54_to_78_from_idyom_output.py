@@ -3,7 +3,7 @@
 import pandas as pd
 
 # Config
-dat_path = 'probe_prediction_results/1003-cpitch-cpitch-100_200_300-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat'
+dat_path = 'probe_prediction_results/1003-cpitch-cpint%dur_cpintfip_cpcint-100_200_300-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat'
 out_csv  = 'probe_prediction_results/cudlun_idyom_probe_probs_midi54_78.csv'
 midi_lo, midi_hi = 54, 78  # inclusive
 
