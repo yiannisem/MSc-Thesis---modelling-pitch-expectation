@@ -203,25 +203,32 @@ def _note_preprocess(susteins, notes):
 
 
 def encode_midi(file_path):
-    events = []
-    notes = []
-    mid = pretty_midi.PrettyMIDI(midi_file=file_path)
+    events = [] # to hold Event objects (see "Event" class)
+    notes = [] # to hold pretty_midi.Note objects (from the library)
+    mid = pretty_midi.PrettyMIDI(midi_file=file_path) # creates a pretty_midi object from the midi file
 
     for inst in mid.instruments:
         inst_notes = inst.notes
         # ctrl.number is the number of sustain control. If you want to know abour the number type of control,
         # see https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
-        ctrls = _control_preprocess([ctrl for ctrl in inst.control_changes if ctrl.number == 64])
-        notes += _note_preprocess(ctrls, inst_notes)
+        ctrls = _control_preprocess([ctrl for ctrl in inst.control_changes if ctrl.number == 64]) # uses _control_preprocess function to process sustain pedal control changes
+        # inst.control_changes is a list[pretty_midi.ControlChange] containing all control changes for that instrument
+        # this is narrowed down to only sustain pedal events (number == 64) using list comprehension
+        notes += _note_preprocess(ctrls, inst_notes) # adjusts note end times according to pedal end times
+    
+    # notes is a list[pretty_midi.Note] containing all notes from all instruments (with sustain pedal adjustments)
 
-    dnotes = _divide_note(notes)
+    dnotes = _divide_note(notes) # converts each pretty_midi.Note into two SplitNote objects: one for note_on and one for note_off (using _divide_notes function)
 
     # print(dnotes)
     dnotes.sort(key=lambda x: x.time)
     # print('sorted:')
     # print(dnotes)
+
+    # to track current time and velocity during iteration
     cur_time = 0
     cur_vel = 0
+    # get time shift and velocity events
     for snote in dnotes:
         events += _make_time_sift_events(prev_time=cur_time, post_time=snote.time)
         events += _snote2events(snote=snote, prev_vel=cur_vel)
