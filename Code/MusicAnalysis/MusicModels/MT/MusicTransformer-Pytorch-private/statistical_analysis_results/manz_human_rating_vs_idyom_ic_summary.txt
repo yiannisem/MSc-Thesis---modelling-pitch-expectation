@@ -1,0 +1,26 @@
+                                OLS Regression Results                               
+=====================================================================================
+Dep. Variable:     Human Expectedness Rating   R-squared:                       0.353
+Model:                                   OLS   Adj. R-squared:                  0.343
+Method:                        Least Squares   F-statistic:                     38.14
+Date:                       Mon, 06 Apr 2026   Prob (F-statistic):           3.82e-08
+Time:                               17:11:11   Log-Likelihood:                -96.876
+No. Observations:                         72   AIC:                             197.8
+Df Residuals:                             70   BIC:                             202.3
+Df Model:                                  1                                         
+Covariance Type:                   nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                         0.5252      0.231      2.272      0.026       0.064       0.986
+IDyOM Information Content     0.7232      0.117      6.176      0.000       0.490       0.957
+==============================================================================
+Omnibus:                       12.503   Durbin-Watson:                   1.176
+Prob(Omnibus):                  0.002   Jarque-Bera (JB):               14.680
+Skew:                           0.799   Prob(JB):                     0.000649
+Kurtosis:                       4.529   Cond. No.                         4.96
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Pearson r = 0.5939, p = 3.82e-08

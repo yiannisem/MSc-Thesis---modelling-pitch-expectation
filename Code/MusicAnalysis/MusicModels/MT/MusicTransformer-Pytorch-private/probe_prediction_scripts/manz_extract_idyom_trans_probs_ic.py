@@ -18,9 +18,9 @@ df_mt = pd.read_csv(mt_actual_path)
 print(f"Loaded Transformer data: {len(df_mt)} rows")
 
 # ── load IDyOM .dat file (find by prefix, use \\?\ prefix on Windows for % in filenames)
-dat_candidates = [f for f in os.listdir(dat_dir) if f.startswith(dat_prefix) and f.endswith('.dat')]
+dat_candidates = [f for f in os.listdir(dat_dir) if f.startswith(dat_prefix) and f.endswith('.dat') and 'both+' not in f]
 if not dat_candidates:
-    raise FileNotFoundError(f"No .dat file starting with '{dat_prefix}' found in {dat_dir}")
+    raise FileNotFoundError(f"No .dat file starting with '{dat_prefix}' and NOT containing 'both+' found in {dat_dir}")
 dat_filename = dat_candidates[0]
 dat_fullpath = os.path.join(os.path.abspath(dat_dir), dat_filename)
 # Windows needs \\?\ prefix to handle % in filenames
@@ -44,24 +44,28 @@ if len(df_mt) != len(dat_df):
     print(f"WARNING: Row count mismatch! Transformer has {len(df_mt)}, IDyOM has {len(dat_df)}")
     print("Results may not align correctly. Fix the input data first.")
 
-# ── extract IDyOM probability for each note's actual pitch ─────────────────────
+# ── extract IDyOM Information Content for each note ────────────────────────────
+# We use IDyOM's native 'ic' column. Looking up via cpitch is error-prone 
+# because IDyOM and Transformer sometimes parse transposed pitches differently.
 results = []
 for i in range(len(df_mt)):
     pitch = int(df_mt.loc[i, 'actual_pitch'])
-    col_name = f'cpitch.{pitch}'
-
-    if col_name in dat_df.columns:
-        idyom_prob = float(dat_df.loc[i, col_name])
+    
+    if 'ic' in dat_df.columns:
+        idyom_ic = float(dat_df.loc[i, 'ic'])
+        idyom_prob = 2 ** -idyom_ic  # convert back to probability
     else:
-        print(f"  Warning: pitch {pitch} at row {i} is outside IDyOM range ({pitch_range[0]}-{pitch_range[-1]}), setting to NaN")
+        print(f"  Warning: 'ic' column not found in IDyOM output at row {i}")
         idyom_prob = np.nan
+        idyom_ic = np.nan
 
     results.append({
         'filename': df_mt.loc[i, 'filename'],
         'note_index': int(df_mt.loc[i, 'note_index']),
         'actual_pitch': pitch,
         'mt_probability': float(df_mt.loc[i, 'probability']),
-        'idyom_probability': idyom_prob
+        'idyom_probability': idyom_prob,
+        'idyom_ic': idyom_ic
     })
 
 df_out = pd.DataFrame(results)

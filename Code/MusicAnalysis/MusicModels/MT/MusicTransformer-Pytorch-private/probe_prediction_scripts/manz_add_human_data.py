@@ -1,7 +1,9 @@
 # Merge human expectation ratings from manzetal92.data into the
 # combined IDyOM/Transformer actual-note probability table.
+# Also computes Information Content (IC = -log2(prob)) for both models.
 
 import pandas as pd
+import numpy as np
 
 # ── paths ──────────────────────────────────────────────────────────────────────
 model_csv  = 'probe_prediction_results/manz_idyom_actual_note_probs.csv'
@@ -11,6 +13,11 @@ out_csv    = 'probe_prediction_results/manz_merged_idyom_transformer_human.csv'
 # ── load model probabilities ───────────────────────────────────────────────────
 df = pd.read_csv(model_csv)
 print(f"Loaded model data: {len(df)} rows")
+
+# ── compute Information Content ────────────────────────────────────────────────
+df['idyom_ic'] = -np.log2(df['idyom_probability'])
+df['transformer_ic'] = -np.log2(df['mt_probability'])
+print(f"Computed IC columns (idyom_ic, transformer_ic)")
 
 # ── load human ratings (skip comment lines starting with #) ────────────────────
 human_rows = []
@@ -23,7 +30,7 @@ with open(human_data, 'r') as f:
         human_rows.append({
             'chorale': int(parts[0]),
             'note': int(parts[1]),
-            'human_weighted': float(parts[3]),
+            'human_average': float(parts[2]),
         })
 
 df_human = pd.DataFrame(human_rows)

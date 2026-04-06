@@ -1,0 +1,26 @@
+                                OLS Regression Results                               
+=====================================================================================
+Dep. Variable:     Human Expectedness Rating   R-squared:                       0.231
+Model:                                   OLS   Adj. R-squared:                  0.220
+Method:                        Least Squares   F-statistic:                     21.04
+Date:                       Mon, 06 Apr 2026   Prob (F-statistic):           1.92e-05
+Time:                               17:11:11   Log-Likelihood:                -103.07
+No. Observations:                         72   AIC:                             210.1
+Df Residuals:                             70   BIC:                             214.7
+Df Model:                                  1                                         
+Covariance Type:                   nonrobust                                         
+===================================================================================================
+                                      coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                               1.1270      0.186      6.045      0.000       0.755       1.499
+Transformer Information Content     0.2548      0.056      4.587      0.000       0.144       0.366
+==============================================================================
+Omnibus:                        2.098   Durbin-Watson:                   1.435
+Prob(Omnibus):                  0.350   Jarque-Bera (JB):                1.375
+Skew:                          -0.238   Prob(JB):                        0.503
+Kurtosis:                       3.481   Cond. No.                         5.44
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Pearson r = 0.4808, p = 1.92e-05
