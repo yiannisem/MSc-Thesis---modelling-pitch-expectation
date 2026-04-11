@@ -104,7 +104,7 @@ def main():
             print("ERROR: Need epoch number to continue from (-continue_epoch) when using continue_weights")
             return
         else:
-            model.load_state_dict(torch.load(args.continue_weights))
+            model.load_state_dict(torch.load(args.continue_weights, map_location=get_device()))
             start_epoch = args.continue_epoch
     elif(args.continue_epoch is not None):
         print("ERROR: Need continue weights (-continue_weights) when using continue_epoch")
