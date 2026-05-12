@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 CSV_PATH = 'probe_prediction_results/manz_merged_idyom_transformer_human.csv'
 OUT_DIR = Path('statistical_analysis_results')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
+# Allow for skipping of first few notes of each chorale in the analysis
+notes_skipped = 0
 
 
 def ols_and_corr(x, y, x_name, y_name, tag):
@@ -87,12 +89,12 @@ def multiple_regression(avg, idyom_ic, transf_ic, tag):
     print(f"[saved] {txt_path}")
 
 
-def main():
+def main(notes_skipped=0):
     df = pd.read_csv(CSV_PATH)
     
     # Skip the first 5 notes of each chorale to account for initialization bias in the models
-    df = df[df['note_index'] >= 7].copy()
-    print(f"Loaded {len(df)} rows from {CSV_PATH} after dropping the first 7 notes.")
+    df = df[df['note_index'] >= notes_skipped].copy()
+    print(f"Loaded {len(df)} rows from {CSV_PATH} after dropping the first {notes_skipped} notes.")
 
     # --- Pairwise analyses ---
     ols_and_corr(
