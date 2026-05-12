@@ -33,7 +33,7 @@ midi_paths = sorted(glob(os.path.join(dir_midi, '*.mid')) +
 filenames = [os.path.basename(p) for p in midi_paths]
 
 model_tag = 'transformer'
-len_context_list = [1]
+len_context_list = [1] # overwritten by args.primer_len = 10**9
 
 for len_context in len_context_list:
     fn_out = f'rpr_ftuned_cudlun_{model_tag}_all_probs.csv'
@@ -71,11 +71,12 @@ for len_context in len_context_list:
 
     i_row = 0
 
+    # per file per note loop
     for fn in filenames:
         args.primer_file = os.path.join(dir_midi, fn)
-        raw_mid = encode_midi(args.primer_file)
+        raw_mid = encode_midi(args.primer_file) # list containing flat token sequence (converted from MIDI)
 
-        # indices of pitch tokens (0..127)
+        # indices of pitch tokens only (0..127)
         note_positions = [i for i, j in enumerate(raw_mid) if j <= 127]
         if len(note_positions) == 0:
             # skip empty files defensively
@@ -84,18 +85,21 @@ for len_context in len_context_list:
         first_row_idx_for_file.append(i_row)
 
         for i_note, note_pos in enumerate(note_positions):
-            if i_note < args.primer_len:
+            if i_note < args.primer_len: # always holds while args.primer_len is chosen to be larger than the number of notes in the piece
                 sequence_start = 0
                 args.num_prime = note_pos
             else:
                 sequence_start = note_positions[i_note - args.primer_len]
                 args.num_prime = note_pos - sequence_start
 
+            # the primer is the sequence of tokens in the context before the note we want to predict
+            # it returns the input sequence of length args.num_prime and the target sequence (only used for training)
             primer, _ = process_midi(raw_mid, args.num_prime, sequence_start, random_seq=False)
-            primer = torch.tensor(primer, dtype=TORCH_LABEL_TYPE, device=get_device())
-            args.target_seq_length = args.num_prime + 1
+            primer = torch.tensor(primer, dtype=TORCH_LABEL_TYPE, device=get_device()) # convert primer to pytorch tensor
+            args.target_seq_length = args.num_prime + 1 # length of the sequence to predict (primer + one note)
 
             with torch.set_grad_enabled(False):
+                # uses get_probs method of MusicTransformer class to get the probability distribution of the next note
                 probs, raw_probs = mt_model.get_probs(
                     primer, i_note, target_seq_length=args.target_seq_length, raw_mid=raw_mid
                 )
@@ -103,8 +107,8 @@ for len_context in len_context_list:
             probs_rows.append(probs)
             raw_probs_rows.append(raw_probs)
 
-            # Capture the final note's distribution (the probe note you appended)
-            if i_note == len(note_positions) - 1:
+            # Get distribution for the probe tone
+            if i_note == len(note_positions) - 1: # checks for the last note in the piece (probe tone)
                 rp = np.asarray(raw_probs, dtype=np.float64)
                 s = rp.sum()
                 if s == 0:
@@ -146,7 +150,7 @@ for len_context in len_context_list:
             index=False
         )
 
-    # NEW: save probe-only CSV (one row per input file; filename + prob_0..prob_127)
+    # Save probe-only CSV (one row per input file; filename + prob_0..prob_127)
     if len(probe_rows) > 0:
         probe_mat = np.vstack(probe_rows)
         probe_cols = [f"prob_{i}" for i in range(128)]

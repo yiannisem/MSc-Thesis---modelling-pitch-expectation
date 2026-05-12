@@ -1,0 +1,26 @@
+                                OLS Regression Results                               
+=====================================================================================
+Dep. Variable:     Human Expectedness Rating   R-squared:                       0.424
+Model:                                   OLS   Adj. R-squared:                  0.417
+Method:                        Least Squares   F-statistic:                     61.77
+Date:                       Sat, 11 Apr 2026   Prob (F-statistic):           1.16e-11
+Time:                               12:05:26   Log-Likelihood:                -112.47
+No. Observations:                         86   AIC:                             228.9
+Df Residuals:                             84   BIC:                             233.9
+Df Model:                                  1                                         
+Covariance Type:                   nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                         0.5339      0.196      2.724      0.008       0.144       0.924
+IDyOM Information Content     0.6994      0.089      7.859      0.000       0.522       0.876
+==============================================================================
+Omnibus:                       15.770   Durbin-Watson:                   1.229
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               20.681
+Skew:                           0.850   Prob(JB):                     3.23e-05
+Kurtosis:                       4.697   Cond. No.                         5.14
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Pearson r = 0.6510, p = 1.16e-11
