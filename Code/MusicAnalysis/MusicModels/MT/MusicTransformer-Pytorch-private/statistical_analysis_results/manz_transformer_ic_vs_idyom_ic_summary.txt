@@ -3,8 +3,8 @@
 Dep. Variable:     Transformer Information Content   R-squared:                       0.136
 Model:                                         OLS   Adj. R-squared:                  0.126
 Method:                              Least Squares   F-statistic:                     13.24
-Date:                             Sat, 11 Apr 2026   Prob (F-statistic):           0.000473
-Time:                                     12:05:27   Log-Likelihood:                -247.19
+Date:                             Thu, 17 Sep 2026   Prob (F-statistic):           0.000473
+Time:                                     13:56:27   Log-Likelihood:                -247.19
 No. Observations:                               86   AIC:                             498.4
 Df Residuals:                                   84   BIC:                             503.3
 Df Model:                                        1                                         

@@ -4,8 +4,8 @@
 Dep. Variable:          human_average   R-squared:                       0.424
 Model:                            OLS   Adj. R-squared:                  0.410
 Method:                 Least Squares   F-statistic:                     30.52
-Date:                Sat, 11 Apr 2026   Prob (F-statistic):           1.16e-10
-Time:                        12:05:27   Log-Likelihood:                -112.47
+Date:                Thu, 17 Sep 2026   Prob (F-statistic):           1.16e-10
+Time:                        13:56:27   Log-Likelihood:                -112.47
 No. Observations:                  86   AIC:                             230.9
 Df Residuals:                      83   BIC:                             238.3
 Df Model:                           2                                         
@@ -32,8 +32,8 @@ Notes:
 Dep. Variable:          human_average   R-squared:                       0.424
 Model:                            OLS   Adj. R-squared:                  0.410
 Method:                 Least Squares   F-statistic:                     30.52
-Date:                Sat, 11 Apr 2026   Prob (F-statistic):           1.16e-10
-Time:                        12:05:27   Log-Likelihood:                -98.327
+Date:                Thu, 17 Sep 2026   Prob (F-statistic):           1.16e-10
+Time:                        13:56:27   Log-Likelihood:                -98.327
 No. Observations:                  86   AIC:                             202.7
 Df Residuals:                      83   BIC:                             210.0
 Df Model:                           2                                         
@@ -41,7 +41,7 @@ Covariance Type:            nonrobust
 ==================================================================================
                      coef    std err          t      P>|t|      [0.025      0.975]
 ----------------------------------------------------------------------------------
-const          -1.249e-16      0.083   -1.5e-15      1.000      -0.166       0.166
+const          -1.353e-16      0.083  -1.62e-15      1.000      -0.166       0.166
 idyom_ic           0.6498      0.090      7.248      0.000       0.471       0.828
 transformer_ic     0.0031      0.090      0.035      0.972      -0.175       0.181
 ==============================================================================

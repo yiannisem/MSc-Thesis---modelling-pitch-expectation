@@ -33,6 +33,7 @@ midi_paths = sorted(glob(os.path.join(dir_midi, '*.mid')) +
 filenames = [os.path.basename(p) for p in midi_paths]
 
 model_tag = 'transformer'
+model_tag = 'transformer_mccc'
 len_context_list = [1] # overwritten by args.primer_len = 10**9
 
 for len_context in len_context_list:
