@@ -1,0 +1,26 @@
+                                   OLS Regression Results                                  
+===========================================================================================
+Dep. Variable:     Transformer Information Content   R-squared:                       0.003
+Model:                                         OLS   Adj. R-squared:                 -0.011
+Method:                              Least Squares   F-statistic:                    0.1966
+Date:                             Fri, 24 Jul 2026   Prob (F-statistic):              0.659
+Time:                                     11:57:02   Log-Likelihood:                -171.69
+No. Observations:                               72   AIC:                             347.4
+Df Residuals:                                   70   BIC:                             351.9
+Df Model:                                        1                                         
+Covariance Type:                         nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                         5.5145      0.653      8.439      0.000       4.211       6.818
+IDyOM Information Content     0.1467      0.331      0.443      0.659      -0.513       0.807
+==============================================================================
+Omnibus:                        1.718   Durbin-Watson:                   0.818
+Prob(Omnibus):                  0.424   Jarque-Bera (JB):                1.706
+Skew:                           0.351   Prob(JB):                        0.426
+Kurtosis:                       2.726   Cond. No.                         4.96
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Pearson r = 0.0529, p = 0.659

@@ -3,8 +3,15 @@ Data/
 Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestro
 Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestro_with_RPR
 Code/MusicAnalysis/MusicModels/MT/TrainedModels/MTMaestroRPR_finetuned_on_MCCC
+Code/MusicAnalysis/MusicModels/MT/TrainedModels/
 
-# Python / Jupyter caches (Added by us to hide those 4,000+ files!):
+# Zip and model weight files:
+*.zip
+*.pickle
+
+# Python / Jupyter caches and Virtual Environments:
+.venv/
+venv/
 .ipynb_checkpoints/
 __pycache__/
 *.pyc

@@ -1,0 +1,55 @@
+=== Raw-scale regression ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             avg_rating   R-squared:                       0.688
+Model:                            OLS   Adj. R-squared:                  0.685
+Method:                 Least Squares   F-statistic:                     217.3
+Date:                Thu, 23 Jul 2026   Prob (F-statistic):           1.44e-50
+Time:                        13:39:57   Log-Likelihood:                -182.38
+No. Observations:                 200   AIC:                             370.8
+Df Residuals:                     197   BIC:                             380.6
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const              6.2119      0.113     54.835      0.000       5.989       6.435
+idyom_ic          -0.2669      0.015    -17.254      0.000      -0.297      -0.236
+transformer_ic    -0.0117      0.012     -0.971      0.333      -0.035       0.012
+==============================================================================
+Omnibus:                        7.086   Durbin-Watson:                   1.930
+Prob(Omnibus):                  0.029   Jarque-Bera (JB):                7.284
+Skew:                           0.466   Prob(JB):                       0.0262
+Kurtosis:                       2.921   Cond. No.                         32.0
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== Standardized (beta) regression ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             avg_rating   R-squared:                       0.688
+Model:                            OLS   Adj. R-squared:                  0.685
+Method:                 Least Squares   F-statistic:                     217.3
+Date:                Thu, 23 Jul 2026   Prob (F-statistic):           1.44e-50
+Time:                        13:39:57   Log-Likelihood:                -167.28
+No. Observations:                 200   AIC:                             340.6
+Df Residuals:                     197   BIC:                             350.4
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const           1.023e-16      0.040   2.57e-15      1.000      -0.078       0.078
+idyom_ic          -0.8050      0.047    -17.254      0.000      -0.897      -0.713
+transformer_ic    -0.0453      0.047     -0.971      0.333      -0.137       0.047
+==============================================================================
+Omnibus:                        7.086   Durbin-Watson:                   1.930
+Prob(Omnibus):                  0.029   Jarque-Bera (JB):                7.284
+Skew:                           0.466   Prob(JB):                       0.0262
+Kurtosis:                       2.921   Cond. No.                         1.78
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
