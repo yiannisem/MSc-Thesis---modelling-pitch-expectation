@@ -89,7 +89,7 @@ def multiple_regression(avg, idyom_ic, transf_ic, tag):
     print(f"[saved] {txt_path}")
 
 
-def main(notes_skipped=0):
+def main(notes_skipped=7):
     df = pd.read_csv(CSV_PATH)
     
     # Skip the first 5 notes of each chorale to account for initialization bias in the models
