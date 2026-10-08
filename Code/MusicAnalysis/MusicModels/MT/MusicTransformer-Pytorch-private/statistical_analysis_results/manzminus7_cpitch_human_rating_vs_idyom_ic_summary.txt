@@ -1,0 +1,26 @@
+                                OLS Regression Results                               
+=====================================================================================
+Dep. Variable:     Human Expectedness Rating   R-squared:                       0.187
+Model:                                   OLS   Adj. R-squared:                  0.175
+Method:                        Least Squares   F-statistic:                     16.08
+Date:                       Thu, 08 Oct 2026   Prob (F-statistic):           0.000150
+Time:                               19:15:12   Log-Likelihood:                -105.09
+No. Observations:                         72   AIC:                             214.2
+Df Residuals:                             70   BIC:                             218.7
+Df Model:                                  1                                         
+Covariance Type:                   nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                         0.9707      0.237      4.103      0.000       0.499       1.443
+IDyOM Information Content     0.3873      0.097      4.010      0.000       0.195       0.580
+==============================================================================
+Omnibus:                       16.467   Durbin-Watson:                   1.570
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               21.965
+Skew:                           0.959   Prob(JB):                     1.70e-05
+Kurtosis:                       4.909   Cond. No.                         5.24
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Pearson r = 0.4322, p = 0.00015

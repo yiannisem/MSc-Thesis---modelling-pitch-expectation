@@ -1,0 +1,26 @@
+                                OLS Regression Results                               
+=====================================================================================
+Dep. Variable:     Human Expectedness Rating   R-squared:                       0.201
+Model:                                   OLS   Adj. R-squared:                  0.191
+Method:                        Least Squares   F-statistic:                     21.13
+Date:                       Thu, 08 Oct 2026   Prob (F-statistic):           1.50e-05
+Time:                               19:00:49   Log-Likelihood:                -126.53
+No. Observations:                         86   AIC:                             257.1
+Df Residuals:                             84   BIC:                             262.0
+Df Model:                                  1                                         
+Covariance Type:                   nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                         0.9661      0.228      4.242      0.000       0.513       1.419
+IDyOM Information Content     0.4092      0.089      4.597      0.000       0.232       0.586
+==============================================================================
+Omnibus:                       14.117   Durbin-Watson:                   1.612
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               16.704
+Skew:                           0.830   Prob(JB):                     0.000236
+Kurtosis:                       4.380   Cond. No.                         5.66
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Pearson r = 0.4483, p = 1.5e-05

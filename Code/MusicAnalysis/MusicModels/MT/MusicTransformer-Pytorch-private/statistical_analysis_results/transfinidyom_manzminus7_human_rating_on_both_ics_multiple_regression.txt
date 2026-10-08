@@ -1,26 +1,26 @@
 === Raw-scale regression ===
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:          human_average   R-squared:                       0.382
-Model:                            OLS   Adj. R-squared:                  0.364
-Method:                 Least Squares   F-statistic:                     21.32
-Date:                Fri, 24 Jul 2026   Prob (F-statistic):           6.18e-08
-Time:                        11:57:02   Log-Likelihood:                -95.213
-No. Observations:                  72   AIC:                             196.4
-Df Residuals:                      69   BIC:                             203.3
+Dep. Variable:          human_average   R-squared:                       0.216
+Model:                            OLS   Adj. R-squared:                  0.194
+Method:                 Least Squares   F-statistic:                     9.529
+Date:                Thu, 08 Oct 2026   Prob (F-statistic):           0.000222
+Time:                        18:14:42   Log-Likelihood:                -103.75
+No. Observations:                  72   AIC:                             213.5
+Df Residuals:                      69   BIC:                             220.3
 Df Model:                           2                                         
 Covariance Type:            nonrobust                                         
 ==================================================================================
                      coef    std err          t      P>|t|      [0.025      0.975]
 ----------------------------------------------------------------------------------
-const              0.1107      0.323      0.342      0.733      -0.534       0.755
-idyom_ic           0.7121      0.115      6.171      0.000       0.482       0.942
-transformer_ic     0.0752      0.042      1.806      0.075      -0.008       0.158
+const              0.5564      0.347      1.603      0.114      -0.136       1.249
+idyom_ic           0.3764      0.096      3.932      0.000       0.185       0.567
+transformer_ic     0.0757      0.047      1.615      0.111      -0.018       0.169
 ==============================================================================
-Omnibus:                        6.854   Durbin-Watson:                   1.216
-Prob(Omnibus):                  0.032   Jarque-Bera (JB):                6.364
-Skew:                           0.561   Prob(JB):                       0.0415
-Kurtosis:                       3.930   Cond. No.                         20.1
+Omnibus:                       11.080   Durbin-Watson:                   1.545
+Prob(Omnibus):                  0.004   Jarque-Bera (JB):               11.530
+Skew:                           0.806   Prob(JB):                      0.00314
+Kurtosis:                       4.115   Cond. No.                         19.2
 ==============================================================================
 
 Notes:
@@ -29,26 +29,26 @@ Notes:
 === Standardized (beta) regression ===
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:          human_average   R-squared:                       0.382
-Model:                            OLS   Adj. R-squared:                  0.364
-Method:                 Least Squares   F-statistic:                     21.32
-Date:                Fri, 24 Jul 2026   Prob (F-statistic):           6.18e-08
-Time:                        11:57:02   Log-Likelihood:                -84.842
-No. Observations:                  72   AIC:                             175.7
-Df Residuals:                      69   BIC:                             182.5
+Dep. Variable:          human_average   R-squared:                       0.216
+Model:                            OLS   Adj. R-squared:                  0.194
+Method:                 Least Squares   F-statistic:                     9.529
+Date:                Thu, 08 Oct 2026   Prob (F-statistic):           0.000222
+Time:                        18:14:42   Log-Likelihood:                -93.384
+No. Observations:                  72   AIC:                             192.8
+Df Residuals:                      69   BIC:                             199.6
 Df Model:                           2                                         
 Covariance Type:            nonrobust                                         
 ==================================================================================
                      coef    std err          t      P>|t|      [0.025      0.975]
 ----------------------------------------------------------------------------------
-const           6.245e-17      0.095    6.6e-16      1.000      -0.189       0.189
-idyom_ic           0.5848      0.095      6.171      0.000       0.396       0.774
-transformer_ic     0.1712      0.095      1.806      0.075      -0.018       0.360
+const           7.633e-17      0.107   7.16e-16      1.000      -0.213       0.213
+idyom_ic           0.4200      0.107      3.932      0.000       0.207       0.633
+transformer_ic     0.1725      0.107      1.615      0.111      -0.041       0.386
 ==============================================================================
-Omnibus:                        6.854   Durbin-Watson:                   1.216
-Prob(Omnibus):                  0.032   Jarque-Bera (JB):                6.364
-Skew:                           0.561   Prob(JB):                       0.0415
-Kurtosis:                       3.930   Cond. No.                         1.05
+Omnibus:                       11.080   Durbin-Watson:                   1.545
+Prob(Omnibus):                  0.004   Jarque-Bera (JB):               11.530
+Skew:                           0.806   Prob(JB):                      0.00314
+Kurtosis:                       4.115   Cond. No.                         1.07
 ==============================================================================
 
 Notes:

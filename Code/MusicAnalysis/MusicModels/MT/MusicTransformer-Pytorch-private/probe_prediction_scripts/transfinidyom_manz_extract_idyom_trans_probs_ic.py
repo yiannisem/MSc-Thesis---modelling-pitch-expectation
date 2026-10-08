@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 
 # ── paths (edit these as needed) ───────────────────────────────────────────────
-dat_prefix = '1004'  # change this to match a different .dat file
+dat_prefix = '1007'  # change this to match a different .dat file
 dat_dir = 'probe_prediction_results'
 mt_actual_path = 'probe_prediction_results/transfinidyom_manz_actual_note_probs.csv'
 
@@ -71,7 +71,7 @@ for i in range(len(df_mt)):
 df_out = pd.DataFrame(results)
 
 # ── save ───────────────────────────────────────────────────────────────────────
-out_path = 'probe_prediction_results/transfinidyom_manz_idyom_actual_note_probs.csv'
+out_path = 'probe_prediction_results/transfinidyom_manz_idyom_cpitch_actual_note_probs.csv'
 df_out.to_csv(out_path, index=False)
 print(f"\nSaved {len(df_out)} rows to: {out_path}")
 print(df_out.head(10).to_string())

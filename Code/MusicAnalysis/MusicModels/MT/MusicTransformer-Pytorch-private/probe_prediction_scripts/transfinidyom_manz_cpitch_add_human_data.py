@@ -6,9 +6,9 @@ import pandas as pd
 import numpy as np
 
 # ── paths ──────────────────────────────────────────────────────────────────────
-model_csv  = 'probe_prediction_results/manz_cpitch_idyom_actual_note_probs.csv'
+model_csv  = 'probe_prediction_results/transfinidyom_manz_idyom_cpitch_actual_note_probs.csv'
 human_data = 'manzetal92.data'
-out_csv    = 'probe_prediction_results/manz_cpitch_merged_idyom_transformer_human.csv'
+out_csv    = 'probe_prediction_results/transfinidyom_manz_cpitch_merged_idyom_transformer_human.csv'
 
 # ── load model probabilities ───────────────────────────────────────────────────
 df = pd.read_csv(model_csv)

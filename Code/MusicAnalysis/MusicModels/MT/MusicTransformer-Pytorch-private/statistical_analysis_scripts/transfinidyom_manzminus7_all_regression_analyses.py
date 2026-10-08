@@ -6,7 +6,7 @@ import statsmodels.api as sm
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 
-CSV_PATH = 'probe_prediction_results/transfinidyom_manz_merged_idyom_transformer_human.csv'
+CSV_PATH = 'probe_prediction_results/transfinidyom_manz_cpitch_merged_idyom_transformer_human.csv'
 OUT_DIR = Path('statistical_analysis_results')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 # Allow for skipping of first few notes of each chorale in the analysis
@@ -32,7 +32,7 @@ def ols_and_corr(x, y, x_name, y_name, tag):
     r, p = pearsonr(x, y)
 
     # Save text summary
-    txt_path = OUT_DIR / f"transfinidyom_manzminus7_{tag}_summary.txt"
+    txt_path = OUT_DIR / f"transfinidyom_manzminus7_cpitch_{tag}_summary.txt"
     with open(txt_path, 'w') as f:
         f.write(model.summary().as_text())
         f.write('\n')
@@ -54,7 +54,7 @@ def ols_and_corr(x, y, x_name, y_name, tag):
     plt.grid(True)
     plt.tight_layout()
     
-    png_path = OUT_DIR / f"transfinidyom_manzminus7_{tag}_scatter_fit.png"
+    png_path = OUT_DIR / f"transfinidyom_manzminus7_cpitch_{tag}_scatter_fit.png"
     plt.savefig(png_path, dpi=150)
     plt.close()
     print(f"[saved] {png_path}")
