@@ -4,7 +4,7 @@ Dep. Variable:     Human Expectedness Rating   R-squared:                       
 Model:                                   OLS   Adj. R-squared:                  0.027
 Method:                        Least Squares   F-statistic:                     2.982
 Date:                       Thu, 08 Oct 2026   Prob (F-statistic):             0.0886
-Time:                               18:14:41   Log-Likelihood:                -111.03
+Time:                               19:41:18   Log-Likelihood:                -111.03
 No. Observations:                         72   AIC:                             226.1
 Df Residuals:                             70   BIC:                             230.6
 Df Model:                                  1                                         

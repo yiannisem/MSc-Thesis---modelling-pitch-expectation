@@ -5,7 +5,7 @@ Dep. Variable:          human_average   R-squared:                       0.324
 Model:                            OLS   Adj. R-squared:                  0.304
 Method:                 Least Squares   F-statistic:                     16.53
 Date:                Thu, 08 Oct 2026   Prob (F-statistic):           1.37e-06
-Time:                        19:15:12   Log-Likelihood:                -98.444
+Time:                        19:42:09   Log-Likelihood:                -98.444
 No. Observations:                  72   AIC:                             202.9
 Df Residuals:                      69   BIC:                             209.7
 Df Model:                           2                                         
@@ -33,7 +33,7 @@ Dep. Variable:          human_average   R-squared:                       0.324
 Model:                            OLS   Adj. R-squared:                  0.304
 Method:                 Least Squares   F-statistic:                     16.53
 Date:                Thu, 08 Oct 2026   Prob (F-statistic):           1.37e-06
-Time:                        19:15:12   Log-Likelihood:                -88.073
+Time:                        19:42:09   Log-Likelihood:                -88.073
 No. Observations:                  72   AIC:                             182.1
 Df Residuals:                      69   BIC:                             189.0
 Df Model:                           2                                         
